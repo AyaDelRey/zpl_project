@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Template QWeb-Text pour ZPL -->
+  <template id="report_zpl_label" t-name="my_zpl_label_report.report_zpl_label">
+    <![CDATA[
+^XA
+^FO50,50^FD<t t-esc="object.name or 'No Name'"/>^FS
+^FO50,100^FDOrder: <t t-esc="object.name or 'Unknown'"/>^FS
+^XZ
+    ]]>
+  </template>
+
+  <!-- Action de rapport -->
+  <record id="action_report_zpl_label" model="ir.actions.report">
+    <field name="name">ZPL Shipping Label</field>
+    <field name="model">stock.picking</field>
+    <field name="report_type">qweb-text</field>
+    <field name="report_name">my_zpl_label_report.report_zpl_label</field>
+    <field name="label" eval="True"/>
+  </record>
+</odoo>
+<!-- This XML file defines a QWeb template for generating ZPL labels in Odoo.
+     It includes a simple label layout with fields for the order name and other details.
+     The action is registered to allow printing of the label from the stock picking model. -->
