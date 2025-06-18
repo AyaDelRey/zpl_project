@@ -3,7 +3,7 @@
     'version': "1.0",
     'summary': "Report template for ZPL label printing",
     'category': 'Reporting',
-    'author': "TonNom",
+    'author': "AyaDelRey",
     'license': 'AGPL-3',
     'depends': [
         'base_report_to_label_printer',
